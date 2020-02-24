@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <title>Algorithm Visualizer</title>
+    <link href="src/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="options">
+    <div class="algorithmOption" onclick="bubbleSort(5);">Bubble Sort</div>
+    <div class="algorithmOption" onclick="selectionSort(5);">Selection Sort</div>
+    <div class="algorithmOption" onclick="linearSearch(searchInputValue)">Linear Search</div>
+    <div class="algorithmOption" onclick="binarySearch(searchInputValue)">Binary Search</div>
+  </div>
+  <section class="searchSection">
+    <div id="arraySize">Change array size</div>
+    <input type="range" min="10" max="100" id="changeSize" value="30">
+    <form>
+      <label for="search">Search for:</label>
+      <input type="number" id="search" name="search" placeholder="Enter a number...">
+      <button onclick="generateBlockUtil()">Another Random Array</button>
+    </form>
+  </section>
+  <section class="data-container"></section>
+  <section id="result" class="resultStyle"></section>
+</body>
+
+
+<script src="src/sliderEvent.js"></script>
+<script src="src/bubblesort.js"></script>
+<script src="src/quicksort.js"></script>
+<script src="src/selectionsort.js"></script>
+<script src="src/searching.js"></script>
+
+
+</html>
